@@ -15,9 +15,11 @@
   p{
     font-family:'Palatino Linotype', 'Book Antiqua', Palatino, serif
   }
-  #header{
+  #name{
+    background-color: blue;
     text-align: center;
-    padding: 50px;
+    padding-top: 40px;
+    padding-bottom: 40px;
     color: grey;
     font-size: 20px;
     font-weight: bold;
@@ -31,11 +33,9 @@
 
 <body>
 
-<div id = "header"> Tessa Marie Zolezzi </div>
+<div id = "name"> Tessa Marie Zolezzi </div>
 
-<div style = "margin-top: 100px">
-  <h3 style = "text-align:center;"> Trying to Make a Difference in the World </h3>
-  <hr>
+<div style = "margin-top: 150px">
   <h2> Latest Updates </h2>
   <p> May 3, 2020 </p>
   <p> Trying to make this website with various degrees of success while sitting
@@ -59,6 +59,24 @@
   <p> blah </p>
   <p> blah </p>
   <p> blah </p>
+  <p> blah </p>
+  <p> blah </p>
+  <p> blah </p>
+  <p> blah </p>
+  <p> blah </p>
 </div>
+
+<script>
+window.onscroll = function() {scrollFunction()};
+
+function scrollFunction() {
+  if(document.body.scrollTop > 50 || document.documentElement.scrollTop > 50) {
+    document.getElementById("name").style.fontSize = "10px";
+  } else {
+    document.getElementById("name").style.fontSize = "20px";
+  }
+}
+</script>
+
 </body>
 </html>
