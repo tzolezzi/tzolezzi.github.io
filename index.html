@@ -3,9 +3,11 @@
 <head>
   <title> Tessa Marie Zolezzi </title>
   <style>
-  body {
+  body,html {
     font-family:'Palatino Linotype', 'Book Antiqua', Palatino, serif;
-    background-color: rgb(0,240,240);
+    background-color: rgba(0,204,204,0.3);
+    height: 100%;
+    margin: 0;
   }
   #name{
     background-image: linear-gradient(rgba(0, 0, 0, 0.5),rgba(0, 0, 0, 0.5)),
@@ -20,10 +22,6 @@
     top: 0px;
     transition: 0.2s;
   }
-  body, html {
-    height: 100%;
-    margin: 0;
-  }
   .name-text {
     font-size: 35px;
     text-align: center;
@@ -36,6 +34,20 @@
     border-style: solid;
     border-width: 3px;
   }
+  .btn {
+    border: 2px solid black;
+    border-radius: 5px;
+    background-color: white;
+    color: black;
+    padding: 14px 28px;
+    font-size: 16px;
+    cursor: pointer;
+  }
+  .divider {
+    width: 5px;
+    height: auto;
+    display: inline-block;
+  }
   </style>
 </head>
 
@@ -45,35 +57,14 @@
   <div class = "name-text"> Tessa Marie Zolezzi </div>
 </div>
 
-<div>
-  <h2> Latest Updates </h2>
-  <p> May 3, 2020 </p>
-  <p> Trying to make this website with various degrees of success while sitting
-    next to my sleeping puppy. Life is pretty good. </p>
-  <p> blah </p>
-  <p> blah </p>
-  <p> blah </p>
-  <p> blah </p>
-  <p> blah </p>
-  <p> blah </p>
-  <p> blah </p>
-  <p> blah </p>
-  <p> blah </p>
-  <p> blah </p>
-  <p> blah </p>
-  <p> blah </p>
-  <p> blah </p>
-  <p> blah </p>
-  <p> blah </p>
-  <p> blah </p>
-  <p> blah </p>
-  <p> blah </p>
-  <p> blah </p>
-  <p> blah </p>
-  <p> blah </p>
-  <p> blah </p>
-  <p> blah </p>
-  <p> blah </p>
+<div style = "text-align: center; margin-top: 1000px; margin-bottom: 1000px;">
+  <button class = "btn"> About </button>
+  <div class = "divider"> </div>
+  <button class = "btn"> Projects </button>
+  <div class = "divider"> </div>
+  <button class = "btn"> Hobbies </button>
+  <div class = "divider"> </div>
+  <button class = "btn"> Resume </button>
 </div>
 
 <script>
@@ -81,7 +72,7 @@ window.onscroll = function() {scrollFunction()};
 
 function scrollFunction() {
   if(document.body.scrollTop > 50 || document.documentElement.scrollTop > 50) {
-    document.getElementById("name").style.height = "75%";
+    document.getElementById("name").style.height =  "25%";
   } else {
     document.getElementById("name").style.height = "100%";
   }
