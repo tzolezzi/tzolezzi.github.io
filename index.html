@@ -34,20 +34,27 @@
     border-style: solid;
     border-width: 3px;
   }
-  .btn {
-    border: 2px solid black;
-    border-radius: 5px;
-    background-color: white;
-    color: black;
-    padding: 14px 28px;
-    font-size: 16px;
+  .tab {
+    background-color: gray;
+    color: white;
+    float: left;
+    border: none;
+    outline: none;
     cursor: pointer;
+    padding: 14px 16px;
+    font-size: 17px;
+    width: 25%;
   }
-  .divider {
-    width: 5px;
-    height: auto;
-    display: inline-block;
+  .tab:hover {
+    background-color: green;
   }
+  .tabcontent {
+    color: white;
+    display: none;
+    padding: 100px 20px;
+    height: 100%;
+  }
+  #About {background-color: red;}
   </style>
 </head>
 
@@ -57,14 +64,17 @@
   <div class = "name-text"> Tessa Marie Zolezzi </div>
 </div>
 
-<div style = "text-align: center; margin-top: 1000px; margin-bottom: 1000px;">
-  <button class = "btn"> About </button>
-  <div class = "divider"> </div>
-  <button class = "btn"> Projects </button>
-  <div class = "divider"> </div>
-  <button class = "btn"> Hobbies </button>
-  <div class = "divider"> </div>
-  <button class = "btn"> Resume </button>
+<button class = "tab" onclick = "openPage('About',this,'red')"
+id = "defaultOpen"> About </button>
+<button class = "tab" onclick = "openPage('Projects',this,'red')"> Projects </button>
+<button class = "tab" onclick = "openPage('Hobbies',this,'red')"> Hobbies </button>
+<button class = "tab" onclick = "openPage('Resume',this,'red')"> Resume </button>
+
+<div id = "About" class = "tabcontent">
+  <h1> About </h1>
+  <p> My name is Tessa, I am engaged to the love of my life, Alexander, and we
+    have a lovely puppy, who we both love more than anything in this world,
+    called See See. </p>
 </div>
 
 <script>
@@ -77,6 +87,12 @@ function scrollFunction() {
     document.getElementById("name").style.height = "100%";
   }
 }
+</script>
+
+<script>
+
+function page(pageName,)
+
 </script>
 
 </body>
