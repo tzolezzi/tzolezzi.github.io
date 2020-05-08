@@ -35,6 +35,7 @@
     border-width: 3px;
   }
   .tab {
+    font-family:'Palatino Linotype', 'Book Antiqua', Palatino, serif;
     background-color: gray;
     color: white;
     float: left;
@@ -78,6 +79,9 @@ id = "defaultOpen"> About </button>
 </div>
 
 <script>
+
+//function that minimize header on scroll
+
 window.onscroll = function() {scrollFunction()};
 
 function scrollFunction() {
@@ -91,7 +95,31 @@ function scrollFunction() {
 
 <script>
 
-function page(pageName,)
+function openPage(pageName, elmnt, color) {
+  var i, tabcontent, tabs;
+
+  //hides all tab content
+
+  tabcontent = document.getElementsByClassName("tabcontent");
+  for (i = 0; i < tabcontent.length; i++) {
+    tabcontent[i].style.display = "none";
+  }
+
+  //removes tab color
+
+  tabs = document.getElementsByClassName("tab");
+  for (i = 0; i < tabs.length; i++) {
+    tabs[i].style.backgroundColor = "";
+  }
+
+  //shows specific tab content
+
+  document.getElementsById(pageName).style.display = "block";
+
+  //adds specific tab color
+
+  elmnt.style.backgroundColor = color;
+}
 
 </script>
 
