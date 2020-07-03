@@ -12,7 +12,7 @@
     margin: 0;
   }
 
-  #name{
+  #name {
     position: absolute;
     text-align: center;
     color: white;
@@ -25,7 +25,7 @@
     padding: 10px;
   }
 
-  #name_pic{
+  #name_pic {
     background-image: linear-gradient(rgba(0, 0, 0, 0.5),rgba(0, 0, 0, 0.5)), url(baby.jpeg) ;
     position: absolute;
     height: 100%;
@@ -36,23 +36,49 @@
     outline-offset: -20px;
   }
 
-  #scroll{
+  #scroll {
     position: absolute;
     left: 50%;
     bottom: 35px;
   }
 
+  .scene {
+    /** why is this not working */
+    .scene_element {
+      animation-duration: 1s;
+      transition-timing-function: ease-in;
+      animation-fill-mode: both;
+    }
+    .scene_element--fadeInUp {
+      animation-name: fadeInUp;
+    }
+  }
+
+  @keyframes fadeInUp {
+    0% {
+      opacity: 0;
+      transform: translate3d(0,100%,0);
+    }
+    100% {
+      opacity: 1;
+      transform: none;
+    }
+  }
   </style>
 </head>
 
 <body>
 
-<div id = "name_pic">
-  <div id = "name"> Tessa Marie Zolezzi </div>
-  <div id = "scroll">
-    <a href="projects.html">
-      <i class="fas fa-angle-down fa-lg" style="color:white"></i>
-    </a>
+<div class = "scene">
+  <div class = "scene_element scene_element--fadeInUp">
+    <div id = "name_pic">
+      <div id = "name"> Tessa Marie Zolezzi </div>
+      <div id = "scroll">
+        <a href = "projects.html">
+          <i class = "fas fa-angle-down fa-lg" style = "color:white"></i>
+        </a>
+      </div>
+    </div>
   </div>
 </div>
 
