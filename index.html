@@ -42,16 +42,25 @@
     bottom: 35px;
   }
 
-  .scene {
-    /** why is this not working */
-    .scene_element {
-      animation-duration: 1s;
-      transition-timing-function: ease-in;
-      animation-fill-mode: both;
-    }
-    .scene_element--fadeInUp {
-      animation-name: fadeInUp;
-    }
+  .scene_element {
+    animation-duration: 0.5s;
+    transition-timing-function: ease-in;
+    animation-fill-mode: both;
+  }
+
+  /** An element that fades in */
+  .scene_element--fadein {
+    animation-name: fadeIn;
+  }
+
+  /** An element that fades in and slides up */
+  .scene_element--fadeInUp {
+    animation-name: fadeInUp;
+  }
+
+  /** An element that fades in and slides from the right */
+  .scene_element--fadeinright {
+    animation-name: fadeInRight;
   }
 
   @keyframes fadeInUp {
@@ -64,23 +73,21 @@
       transform: none;
     }
   }
+
   </style>
 </head>
 
 <body>
 
-<div class = "scene">
-  <div class = "scene_element scene_element--fadeInUp">
-    <div id = "name_pic">
-      <div id = "name"> Tessa Marie Zolezzi </div>
-      <div id = "scroll">
-        <a href = "projects.html">
-          <i class = "fas fa-angle-down fa-lg" style = "color:white"></i>
-        </a>
-      </div>
-    </div>
+<div class = "scene_element scene_element--fadeInUp", div id = "name_pic">
+  <div id = "name"> Tessa Marie Zolezzi </div>
+  <div id = "scroll">
+    <a href = "projects.html">
+      <i class = "fas fa-angle-down fa-lg" style = "color:white"></i>
+    </a>
   </div>
 </div>
+
 
 </body>
 
